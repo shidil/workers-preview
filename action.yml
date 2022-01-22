@@ -1,11 +1,30 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Workers Preview'
+description: 'Cloudflare workers preview for every pull requests'
+author: 'shidil'
 inputs:
-  milliseconds: # change this
+  github_token:
+    description: 'GitHub token'
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  cf_token:
+    description: 'Cloudflare token (Edit Workers Scope)'
+    required: true
+  working_directory:
+    description: 'Directory of wrangler project'
+    required: false
+    default: '.'
+  teardown:
+    description: 'Remove preview instance on pr close'
+    required: false
+    default: 'false'
+  prepublish:
+    description: 'script to run before wrangler publish'
+    required: false
+outputs:
+  preview_url:
+    description: 'URL generated for the preview environment'
 runs:
-  using: 'node12'
+  using: node16
   main: 'dist/index.js'
+branding:
+  icon: 'upload-cloud'
+  color: 'purple'
