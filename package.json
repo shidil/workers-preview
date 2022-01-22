@@ -17,15 +17,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/shidil/cloudflare-workers-preview.git"
   },
   "keywords": [
-    "actions",
-    "node",
-    "setup"
+    "cloudflare",
+    "workers",
+    "preview",
+    "pr",
+    "github",
+    "actions"
   ],
-  "author": "",
+  "author": "Shidil Eringa <shidil@live.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shidil/cloudflare-workers-preview/issues"
+  },
+  "homepage": "https://github.com/shidil/cloudflare-workers-preview#readme",
   "dependencies": {
     "@actions/core": "^1.6.0"
   },
